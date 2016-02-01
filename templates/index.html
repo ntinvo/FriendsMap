@@ -13,6 +13,7 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
 
     <!--    {{ url_for('static', filename='') }}    -->
     <!-- Custom CSS -->
@@ -31,13 +32,6 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
-    <style>
-      #map {
-        width: 500px;
-        height: 400px;
-      }
-    </style>
 
 </head>
 
@@ -94,6 +88,27 @@
             </div>
         </div>
     </header>
+
+
+
+    <!-- Google Maps -->
+    <sectionid="map" class="bg-light-gray">
+        <div id="map"></div>
+        <script>
+          function initMap() {
+            var mapDiv = document.getElementById('map');
+            var map = new google.maps.Map(mapDiv, {
+              center: {lat: 44.540, lng: -78.546},
+              zoom: 8
+            });
+          }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"async defer>
+        </script>
+    </section>
+
+
+
 
     <!-- Services Section -->
     <section id="services">
@@ -232,28 +247,6 @@
     </section>
 
 
-    <!-- Google Maps -->
-    <sectionid="map" class="bg-light-gray">
-        <div id="map"></div>
-        <script>
-          function initMap() {
-            var mapDiv = document.getElementById('map');
-            var map = new google.maps.Map(mapDiv, {
-              center: {lat: 44.540, lng: -78.546},
-              zoom: 8
-            });
-          }
-        </script>
-        <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"async defer>
-        </script>
-    </section>
-
-
-
-
-
-
-
 
 
 
@@ -348,11 +341,11 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-6">
                     <div class="team-member">
                         <img src="img/team/1.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Kay Garland</h4>
-                        <p class="text-muted">Lead Designer</p>
+                        <h4>Uyviet Nguyen</h4>
+                        <p class="text-muted">Engineer</p>
                         <ul class="list-inline social-buttons">
                             <li><a href="#"><i class="fa fa-twitter"></i></a>
                             </li>
@@ -363,26 +356,11 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-6">
                     <div class="team-member">
                         <img src="img/team/2.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Larry Parker</h4>
-                        <p class="text-muted">Lead Marketer</p>
-                        <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="team-member">
-                        <img src="img/team/3.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Diana Pertersen</h4>
-                        <p class="text-muted">Lead Developer</p>
+                        <h4>Tin Vo</h4>
+                        <p class="text-muted">Engineer</p>
                         <ul class="list-inline social-buttons">
                             <li><a href="#"><i class="fa fa-twitter"></i></a>
                             </li>
